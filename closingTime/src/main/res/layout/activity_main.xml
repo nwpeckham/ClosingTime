@@ -91,7 +91,7 @@
             android:id="@+id/buttonSpam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="irSend"
+            android:onClick="spamThatShit"
             android:text="Spam That Shit"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"

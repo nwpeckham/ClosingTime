@@ -61,6 +61,18 @@ public class MainActivity extends Activity {
         }
     }
 
+    public void spamThatShit(View view){
+        for(int i = 0; i < irData.size(); i++){
+            int key = irData.keyAt(i);
+            String data = irData.valueAt(i);
+            if (data != null && data != irData.get(R.id.buttonFixVizio)){
+                Toast.makeText(this, data,3);
+                irManager.transmit(getFrequency(data),getCodes(data));
+            }
+            Toast.makeText(this,"PEWPEWPEWPEW",2);
+        }
+    }
+
     protected int getFrequency(String irData) {
         List<String> list = new ArrayList<String>(Arrays.asList(irData
                 .split(" ")));
@@ -87,6 +99,7 @@ public class MainActivity extends Activity {
 
         return irCodes;
     }
+
 
     /*protected String hex2dec(String irData) {
         List<String> list = new ArrayList<String>(Arrays.asList(irData
