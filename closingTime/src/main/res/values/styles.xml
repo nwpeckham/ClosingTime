@@ -1,19 +1,26 @@
 <resources>
 
     <!-- Base application theme. -->
-    <color name="background">#2f4659</color>
+    <color name="background">#8c887b</color>
+    <color name="buttonBackground">#2f4659</color>
+    <color name="buttonBackgroundComplement">#57402e</color>
     <color name="textColor">#9BD1F2</color>
     <color name="textColorComplement">#BDE6FF</color>
-    <color name="backgroundComplement">#57402e</color>
-    <style name="ButtonTheme" parent="android:Theme.Light">
-        <item name="android:background">@color/background</item>
+
+    <style name="CTTheme" parent="android:Theme.Light">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+    </style>
+
+    <style name="ButtonTheme">
+        <item name="android:background">@color/buttonBackground</item>
         <item name="android:textColor">@color/textColor</item>
         <item name="android:layout_margin">8px</item>
     </style>
 
     <style name="ComplementaryButton" parent="ButtonTheme">
         <item name="android:textColor">@color/textColorComplement</item>
-        <item name="android:background">@color/backgroundComplement</item>
+        <item name="android:background">@color/buttonBackgroundComplement</item>
     </style>
 
 </resources>
