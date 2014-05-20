@@ -1,8 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <color name="background">#2f4659</color>
+    <color name="textColor">#9BD1F2</color>
+    <color name="textColorComplement">#BDE6FF</color>
+    <color name="backgroundComplement">#57402e</color>
+    <style name="ButtonTheme" parent="android:Theme.Light">
+        <item name="android:background">@color/background</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_margin">8px</item>
+    </style>
+
+    <style name="ComplementaryButton" parent="ButtonTheme">
+        <item name="android:textColor">@color/textColorComplement</item>
+        <item name="android:background">@color/backgroundComplement</item>
     </style>
 
 </resources>

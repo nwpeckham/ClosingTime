@@ -3,5 +3,13 @@
 
     <string name="app_name">Closing Time</string>
     <string name="action_settings">Settings</string>
+    <string name="vizio">Vizio</string>
+    <string name="sanyo">Sanyo</string>
+    <string name="hdmi">HDMI</string>
+    <string name="panasonic">Panasonic</string>
+    <string name="dynex">Dynex</string>
+    <string name="samsung">Samsung</string>
+    <string name="sts">Spam That Shit</string>
+
 
 </resources>

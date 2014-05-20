@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:background="#ccd4f3">
+    android:background="#8c887b">
 
 
     <LinearLayout
@@ -30,20 +30,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:onClick="irSend"
-                android:text="Vizio"
+                android:text="@string/vizio"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_weight="0.14" />
+                style="@style/ButtonTheme"
+                android:layout_weight=".14" />
 
             <Button
                 android:id="@+id/buttonFixVizio"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:onClick="irSend"
-                android:text="HDMI"
+                android:text="@string/hdmi"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_weight="0.01" />
+                style="@style/ButtonTheme" />
         </LinearLayout>
 
         <Button
@@ -51,53 +52,57 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="irSend"
-            android:text="Samsung"
+            android:text="@string/samsung"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_weight="0.14" />
+            android:layout_weight="0.14"
+            style="@style/ButtonTheme" />
 
         <Button
             android:id="@+id/buttonSanyo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="irSend"
-            android:text="Sanyo"
+            android:text="@string/sanyo"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_weight="0.14" />
+            android:layout_weight="0.14"
+            style="@style/ButtonTheme" />
 
         <Button
             android:id="@+id/buttonPanasonic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="irSend"
-            android:text="Panasonic"
+            android:text="@string/panasonic"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_weight="0.14" />
+            android:layout_weight="0.14"
+            style="@style/ButtonTheme" />
 
         <Button
             android:id="@+id/buttonDynex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="irSend"
-            android:text="Dynex"
+            android:text="@string/dynex"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_weight="0.14"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            style="@style/ButtonTheme" />
 
         <Button
             android:id="@+id/buttonSpam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="spamThatShit"
-            android:text="Spam That Shit"
+            android:text="@string/sts"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_weight="0.14"
             android:layout_gravity="center_horizontal"
-            android:background="#711900" />
+            style="@style/ComplementaryButton" />
 
     </LinearLayout>
 

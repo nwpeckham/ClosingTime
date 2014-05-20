@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
         irData = new SparseArray<String>();
         irData.put(
                 R.id.buttonVizio,
-                "0000 006D 0022 0002 0157 00AC 0015 0016 0015 0016 0015 0041 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0041 0015 0016 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0016 0015 0041 0015 0016 0015 0016 0015 0041 0015 0016 0015 0016 0015 0016 0015 0041 0015 0016 0015 0041 0015 0041 0015 0016 0015 0041 0015 0041 0015 0689 0157 0056 0015 0E94");
+                "0000 006D 0022 0002 0157 00AC 0015 0016 0015 0016 0015 0041 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0041 0015 0016 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0689 0157 0056 0015 0E94");
         irData.put(
                 R.id.buttonFixVizio,
                 "0000 006D 0022 0002 0157 00AC 0015 0016 0015 0016 0015 0041 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0041 0015 0016 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0016 0015 0016 0015 0041 0015 0016 0015 0016 0015 0016 0015 0016 0015 0041 0015 0041 0015 0041 0015 0016 0015 0041 0015 0041 0015 0041 0015 0041 0015 0016 0015 0689 0157 0056 0015 0E94");
@@ -65,13 +65,11 @@ public class MainActivity extends Activity {
         for(int i = 0; i < irData.size(); i++){
             int key = irData.keyAt(i);
             String data = irData.valueAt(i);
-            if (data != null && data != irData.get(R.id.buttonFixVizio)){
                 Toast.makeText(this, data,3);
                 irManager.transmit(getFrequency(data),getCodes(data));
             }
             Toast.makeText(this,"PEWPEWPEWPEW",2);
         }
-    }
 
     protected int getFrequency(String irData) {
         List<String> list = new ArrayList<String>(Arrays.asList(irData
@@ -99,28 +97,5 @@ public class MainActivity extends Activity {
 
         return irCodes;
     }
-
-
-    /*protected String hex2dec(String irData) {
-        List<String> list = new ArrayList<String>(Arrays.asList(irData
-                .split(" ")));
-        list.remove(0); // dummy
-        int frequency = Integer.parseInt(list.remove(0), 16); // frequency
-        list.remove(0); // seq1
-        list.remove(0); // seq2
-
-        for (int i = 0; i < list.size(); i++) {
-            list.set(i, Integer.toString(Integer.parseInt(list.get(i), 16)));
-        }
-
-        frequency = (int) (1000000 / (frequency * 0.241246));
-        list.add(0, Integer.toString(frequency));
-
-        irData = "";
-        for (String s : list) {
-            irData += s + ",";
-        }
-        return irData;
-    }*/
 
 }
